@@ -9,8 +9,10 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import us.iluthi.soulofw0lf.yawspleef.loaders.LoadArena;
 import us.iluthi.soulofw0lf.yawspleef.loaders.LoadLocale;
+import us.iluthi.soulofw0lf.yawspleef.loaders.RegisterEvents;
 import us.iluthi.soulofw0lf.yawspleef.runnables.ArenaCheck;
 import us.iluthi.soulofw0lf.yawspleef.savers.SaveArena;
+import us.iluthi.soulofw0lf.yawspleef.utility.Locations;
 import us.iluthi.soulofw0lf.yawspleef.utility.Misc;
 
 import java.util.HashMap;
@@ -21,21 +23,6 @@ import java.util.Map;
  * Created by: soulofw0lf
  * Date: 8/7/13
  * Time: 2:38 PM
- * <p/>
- * This file is part of the Rpg Suite Created by Soulofw0lf and Linksy.
- * <p/>
- * The Rpg Suite is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * <p/>
- * The Rpg Suite is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * <p/>
- * You should have received a copy of the GNU General Public License
- * along with The Rpg Suite Plugin you have downloaded.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class YaWSpleef extends JavaPlugin implements Listener {
     public static Plugin plugin;
@@ -56,12 +43,13 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public void onEnable(){
         plugin = this;
         saveDefaultConfig();
+        RegisterEvents.regAll(plugin);
         LoadLocale.loadLocale();
         LoadArena.loadArenas();
         ArenaCheck.checkArenas();
         econOn = setupEconomy();
         if (getConfig().get("Lobby") != null){
-            loc = Misc.stringToLoc(getConfig().getString("Lobby"));
+            loc = Locations.stringToLoc(getConfig().getString("Lobby"));
         }
 
     }
