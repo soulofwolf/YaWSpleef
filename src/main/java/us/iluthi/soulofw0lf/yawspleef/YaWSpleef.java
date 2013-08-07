@@ -13,7 +13,6 @@ import us.iluthi.soulofw0lf.yawspleef.loaders.RegisterEvents;
 import us.iluthi.soulofw0lf.yawspleef.runnables.ArenaCheck;
 import us.iluthi.soulofw0lf.yawspleef.savers.SaveArena;
 import us.iluthi.soulofw0lf.yawspleef.utility.Locations;
-import us.iluthi.soulofw0lf.yawspleef.utility.Misc;
 
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +31,8 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public static Map<String, List<String>> mapQueues = new HashMap<>();
     public static Map<String, String> localeSettings = new HashMap<>();
     public static Map<String, String> commandSettings = new HashMap<>();
-    public static YamlConfiguration locale;
+    public static Map<String, String> permissionSettings = new HashMap<>();
+    public static Map<String, String> signLines = new HashMap<>();
     public static String stub = "";
     public static Location loc;
     public static Economy econ;

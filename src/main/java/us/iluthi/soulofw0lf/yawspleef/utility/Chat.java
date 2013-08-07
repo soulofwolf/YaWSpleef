@@ -12,11 +12,13 @@ import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
  * Date: 8/7/13
  * Time: 2:47 PM
  */
-public class Misc {
-    public static String color(String s){
-        String output = ChatColor.translateAlternateColorCodes('&', YaWSpleef.stub + s);
-        return output;
+public class Chat {
+    public static String colorStub(String s){
+        s = ChatColor.translateAlternateColorCodes('&', YaWSpleef.stub + s);
+        return s;
     }
-
-
+    public static String color(String s){
+        s = ChatColor.translateAlternateColorCodes('&', s);
+        return s;
+    }
 }
