@@ -33,7 +33,7 @@ public class ResetArena {
             a.setRunning(false);
             a.setCounting(false);
             a.getPlayers().clear();
-            SignHandler.updateSigns(a.getStartSign(), YaWSpleef.signLines.get("Line 1"), YaWSpleef.signLines.get("Line 2").replace("@a", a.getName()), YaWSpleef.signLines.get("Line 3").replace("@p", "0").replace("@i", a.getMaxPlayers().toString()), YaWSpleef.signLines.get("Avalailable"));
+            SignHandler.updateSigns(a);
             if (a.getResetBlocks().isEmpty()){
                 continue;
             }
@@ -48,7 +48,7 @@ public class ResetArena {
         a.setRunning(false);
         a.setCounting(false);
         a.getPlayers().clear();
-        SignHandler.updateSigns(a.getStartSign(), YaWSpleef.signLines.get("Line 1"), YaWSpleef.signLines.get("Line 2").replace("@a", a.getName()), YaWSpleef.signLines.get("Line 3").replace("@p", "0").replace("@i", a.getMaxPlayers().toString()), YaWSpleef.signLines.get("Avalailable"));
+        SignHandler.updateSigns(a);
         if (a.getResetBlocks().isEmpty()){
             return;
         }

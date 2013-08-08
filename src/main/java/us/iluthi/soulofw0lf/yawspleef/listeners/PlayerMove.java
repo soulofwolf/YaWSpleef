@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.Plugin;
 import us.iluthi.soulofw0lf.yawspleef.Arena;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
+import us.iluthi.soulofw0lf.yawspleef.arenaevents.RemovePlayer;
 
 /**
  * Created by: soulofw0lf
@@ -30,6 +31,10 @@ public class PlayerMove implements Listener{
         if (YaWSpleef.onStart.contains(p.getName())){
             event.setCancelled(true);
             return;
+        }
+        Arena a = YaWSpleef.spleefArenas.get(YaWSpleef.playerArenas.get(p.getName()));
+        if (p.getLocation().getY() <= a.getArenaY() - 1.5){
+            RemovePlayer.fellOut(a, p);
         }
     }
 }

@@ -1,7 +1,10 @@
 package us.iluthi.soulofw0lf.yawspleef.listeners;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.Sign;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,12 +15,16 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import us.iluthi.soulofw0lf.yawspleef.Arena;
 import us.iluthi.soulofw0lf.yawspleef.Gun;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
 import us.iluthi.soulofw0lf.yawspleef.loaders.InventoryLoader;
 import us.iluthi.soulofw0lf.yawspleef.runnables.CDRun;
 import us.iluthi.soulofw0lf.yawspleef.runnables.RunShot;
 import us.iluthi.soulofw0lf.yawspleef.utility.Chat;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by: soulofw0lf
@@ -34,6 +41,35 @@ public class PlayerInteract implements Listener{
         if (YaWSpleef.onStart.contains(p.getName())){
             event.setCancelled(true);
             return;
+        }
+        if (!YaWSpleef.playerQue.contains(p.getName()) && !YaWSpleef.playerArenas.containsKey(p.getName())){
+            Block b = event.getClickedBlock();
+            if (b == null || b.getType().equals(Material.AIR)){
+                return;
+            }
+            if (b.getState() instanceof Sign){
+                Sign sign = (Sign)b.getState();
+                for (String key : YaWSpleef.spleefArenas.keySet()){
+                    Arena a = YaWSpleef.spleefArenas.get(key);
+                    if (sign.equals(a.getStartSign())){
+                        YaWSpleef.playerQue.add(p.getName());
+                        if (YaWSpleef.mapQueues.containsKey(a.getName())){
+                            YaWSpleef.mapQueues.get(a.getName()).add(p.getName());
+                        } else {
+                            List<String> play = new ArrayList<>();
+                            play.add(p.getName());
+                            YaWSpleef.mapQueues.put(a.getName(), play);
+                        }
+                        a.getPlayers().add(p.getName());
+                        p.teleport(a.getStartLocs().get(a.getPlayers().size() - 1));
+                        p.setGameMode(GameMode.ADVENTURE);
+                        YaWSpleef.playerInventory.put(p.getName(), p.getInventory().getContents());
+                        p.getInventory().clear();
+                        InventoryLoader.gameInv(p);
+                    }
+                }
+            }
+
         }
         ItemStack iS = p.getItemInHand();
         if (iS == null || iS.getType().equals(Material.AIR)){

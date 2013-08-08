@@ -32,11 +32,13 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public static Map<String, Arena> spleefArenas = new HashMap<>();
     public static Map<String, String> playerArenas = new HashMap<>();
     public static Map<String, List<String>> mapQueues = new HashMap<>();
+    public static List<String> playerQue = new ArrayList<>();
     public static Map<String, String> localeSettings = new HashMap<>();
     public static Map<String, String> commandSettings = new HashMap<>();
     public static Map<String, String> permissionSettings = new HashMap<>();
     public static Map<String, String> signLines = new HashMap<>();
     public static Map<String, ItemStack> weaponPerms = new HashMap<>();
+    public static Map<String, ItemStack[]> playerInventory = new HashMap<>();
     public static String stub = "";
     public static Location loc;
     public static Economy econ;

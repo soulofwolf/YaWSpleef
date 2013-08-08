@@ -1,5 +1,7 @@
 package us.iluthi.soulofw0lf.yawspleef.arenaevents;
 
+import us.iluthi.soulofw0lf.yawspleef.Arena;
+
 /**
  * Created by: soulofw0lf
  * Date: 8/7/13
@@ -21,4 +23,7 @@ package us.iluthi.soulofw0lf.yawspleef.arenaevents;
  * along with The Rpg Suite Plugin you have downloaded.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class EndArena {
+    public static void gameOver(Arena a){
+
+    }
 }

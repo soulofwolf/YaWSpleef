@@ -2,32 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e202d7d8-8926-443d-b49c-00df98d965c8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/RunShot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/RemovePlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/ArenaCheck.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/ArenaCheck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/Countdown.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/Countdown.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/EndArena.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/EndArena.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/ResetArena.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/ResetArena.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/SignHandler.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/SignHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/StartArena.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/StartArena.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="YaWSpleef.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375904227497" ignored="false" />
-    <file path="/YaWSpleef.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375985678926" ignored="false" />
+    <file path="/YaWSpleef.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375996945550" ignored="false" />
     <file path="/Misc.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375905203507" ignored="false" />
     <file path="/Dummy.txt" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375989014445" ignored="false" />
-    <file path="/Arena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375914009892" ignored="false" />
+    <file path="/Arena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375990449924" ignored="false" />
     <file path="/LoadArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375907468697" ignored="false" />
-    <file path="/LoadLocale.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375909695784" ignored="false" />
+    <file path="/LoadLocale.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375995489102" ignored="false" />
     <file path="/SaveArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375907573679" ignored="false" />
-    <file path="/ArenaCheck.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375907851973" ignored="false" />
-    <file path="/Countdown.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375907843481" ignored="false" />
+    <file path="/ArenaCheck.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375995181819" ignored="false" />
+    <file path="/Countdown.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375995634259" ignored="false" />
     <file path="/PLayerMove.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375907893659" ignored="false" />
     <file path="/RegisterEvents.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375909095175" ignored="false" />
     <file path="/InventoryClick.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375979584607" ignored="false" />
-    <file path="/PlayerInteract.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375986610303" ignored="false" />
+    <file path="/PlayerInteract.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375997137311" ignored="false" />
     <file path="/PlayerJoin.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375908944422" ignored="false" />
     <file path="/PlayerLeave.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375908981611" ignored="false" />
-    <file path="/PlayerMove.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375910941989" ignored="false" />
+    <file path="/PlayerMove.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375990635776" ignored="false" />
     <file path="/ProjHit.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375990065087" ignored="false" />
     <file path="/Chat.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375909337663" ignored="false" />
     <file path="/ResetArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375914272271" ignored="false" />
@@ -39,6 +46,10 @@
     <file path="/CDRun.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375983344252" ignored="false" />
     <file path="/RunShot.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375984972916" ignored="false" />
     <file path="$PROJECT_DIR$/../Survival-Games/src/main/java/org/mcsg/survivalgames/SettingsManager.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375989048851" ignored="false" />
+    <file path="/RemovePlayer.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375997297784" ignored="false" />
+    <file path="/EndArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375993586983" ignored="false" />
+    <file path="/SignHandler.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375995089194" ignored="false" />
+    <file path="/StartArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375995588561" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,31 +110,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlayerInteract.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java">
+      <file leaf-file-name="YaWSpleef.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="68" selection-start="6653" selection-end="6653" vertical-scroll-proportion="3.1988165">
+            <state line="41" column="0" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerDamage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java">
+      <file leaf-file-name="LoadLocale.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="79" selection-start="2498" selection-end="2498" vertical-scroll-proportion="0.0">
+            <state line="22" column="37" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerInteract.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="56" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemovePlayer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/RemovePlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="68" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InventoryLoader.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/InventoryLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="329" selection-end="329" vertical-scroll-proportion="0.25757575">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjHit.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="89" selection-start="6964" selection-end="6964" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -146,22 +175,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/ResetArena.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/ParticleEffect.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/InventoryLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/WeaponLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/InventoryClick.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/CDRun.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/RunShot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/EndArena.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/SignHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/ArenaCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/StartArena.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/Countdown.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/ResetArena.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/RemovePlayer.java" />
       </list>
     </option>
   </component>
@@ -609,7 +638,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1315" height="1042" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -623,7 +652,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -695,112 +724,62 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/savers/SaveArena.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/Locations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/ParticleEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0">
+        <state line="35" column="57" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/SignHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+        <state line="27" column="90" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/ArenaCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="84" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/Countdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="39" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+        <state line="68" column="0" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/EndArena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="50" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/WeaponLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="33" selection-start="4945" selection-end="4945" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/InventoryClick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="77" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
+        <state line="25" column="34" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/CDRun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/ResetArena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="71" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1139#1277#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/InventoryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="110" selection-start="695" selection-end="748" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
+        <state line="51" column="71" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/RunShot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/StartArena.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="39" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="89" selection-start="6964" selection-end="6964" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -814,10 +793,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerJoin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/InventoryClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="37" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="68" selection-start="6653" selection-end="6653" vertical-scroll-proportion="3.1988165">
+        <state line="64" column="56" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/RemovePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="68" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/InventoryLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="329" selection-end="329" vertical-scroll-proportion="0.25757575">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -25,6 +25,7 @@ public class ArenaCheck {
                             continue;
                         }
                         if (YaWSpleef.mapQueues.get(key).size() >= a.getMinPlayers()){
+                            a.setCounting(true);
                             Countdown.arenaCountdown(key);
                         }
                     }

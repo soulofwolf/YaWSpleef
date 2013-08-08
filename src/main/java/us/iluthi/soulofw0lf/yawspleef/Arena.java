@@ -14,10 +14,10 @@ import java.util.List;
  */
 public class Arena {
     private String name = "";
+    private double arenaY = 64;
     private List<Block> resetBlocks = new ArrayList<>();
     private List<String> players = new ArrayList<>();
     private List<Location> startLocs = new ArrayList<>();
-    private Location lobby;
     private String permission = "";
     private boolean permissionNeeded = false;
     private int minPlayers = 0;
@@ -66,14 +66,6 @@ public class Arena {
         this.permission = permission;
     }
 
-    public Location getLobby() {
-        return lobby;
-    }
-
-    public void setLobby(Location lobby) {
-        this.lobby = lobby;
-    }
-
     public List<Location> getStartLocs() {
         return startLocs;
     }
@@ -120,5 +112,13 @@ public class Arena {
 
     public void setMinPlayers(int minPlayers) {
         this.minPlayers = minPlayers;
+    }
+
+    public double getArenaY() {
+        return arenaY;
+    }
+
+    public void setArenaY(double arenaY) {
+        this.arenaY = arenaY;
     }
 }
