@@ -10,10 +10,13 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import us.iluthi.soulofw0lf.yawspleef.Gun;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
 import us.iluthi.soulofw0lf.yawspleef.loaders.InventoryLoader;
 import us.iluthi.soulofw0lf.yawspleef.runnables.CDRun;
+import us.iluthi.soulofw0lf.yawspleef.runnables.RunShot;
 import us.iluthi.soulofw0lf.yawspleef.utility.Chat;
 
 /**
@@ -80,6 +83,9 @@ public class PlayerInteract implements Listener{
             if (YaWSpleef.specialShotCD.contains(p.getName())){
                 return;
             }
+            if (YaWSpleef.playerShots.containsKey(p.getName())){
+                YaWSpleef.playerShots.remove(p.getName());
+            }
             double cD = 0;
             if (g.isBlindGrenade()){
                 if (g.getBlindGrenadeCD() > cD){
@@ -106,21 +112,20 @@ public class PlayerInteract implements Listener{
                 if (g.getDoubleShotCD() > cD){
                     cD = g.getDoubleShotCD();
                 }
-                p.launchProjectile(Arrow.class);
-                p.launchProjectile(Arrow.class);
+                RunShot.multiShot(p.getName(), 2, 20);
             }
             if (g.isInvisShot()){
                 if (g.getInvisShotCD() > cD){
                     cD = g.getInvisShotCD();
                 }
-
+                p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, (g.getInvisShotDuration() * 20), 1));
                 p.launchProjectile(Arrow.class);
             }
             if (g.isRapidShot()){
                 if (g.getRapidShotCd() > cD){
                     cD = g.getRapidShotCd();
                 }
-
+                RunShot.multiShot(p.getName(), g.getRapidShotShots(), (int)(g.getRapidShotTime() *20));
             }
             if (g.isSlowGrenade()){
                 if (g.getSlowGrenadeCD() > cD){
@@ -141,6 +146,7 @@ public class PlayerInteract implements Listener{
                 if (g.getSpeedBoostCD() > cD){
                     cD = g.getSpeedBoostCD();
                 }
+                p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, (g.getSpeedBoostDuration() * 20), g.getSpeedBoostStrength()));
                 p.launchProjectile(Arrow.class);
             }
             if (g.isSpeedGrenade()){
@@ -167,11 +173,9 @@ public class PlayerInteract implements Listener{
                 if (g.getTeleportShotCD() > cD){
                     cD = g.getTeleportShotCD();
                 }
-                p.launchProjectile(Arrow.class);
-                p.launchProjectile(Arrow.class);
-                p.launchProjectile(Arrow.class);
+                RunShot.multiShot(p.getName(), 2, 20);
             }
-
+            YaWSpleef.playerShots.put(p.getName(), g.getName());
             YaWSpleef.specialShotCD.add(p.getName());
             CDRun.specialCD(p.getName(), (int)(cD*20));
         }
