@@ -2,8 +2,11 @@ package us.iluthi.soulofw0lf.yawspleef.loaders;
 
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import us.iluthi.soulofw0lf.yawspleef.Gun;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
+import us.iluthi.soulofw0lf.yawspleef.utility.Chat;
 
 import java.io.File;
 import java.io.IOException;
@@ -85,6 +88,7 @@ public class WeaponLoader {
             lores.add("&2This gun fires in short bursts!");
             lores.add("&2Right click to Launch 8 shots");
             lores.add("&2 Over 8 Seconds");
+            lores.add("&eCost: &4@c");
             weap.set("Weapons.&4Rail Gun.Weapon Lore", lores);
             weap.set("Weapons.&4Rail Gun.Permission", "gun.rapidshot");
             weap.set("Weapons.&4Rail Gun.Projectile Type", "ARROW");
@@ -147,6 +151,16 @@ public class WeaponLoader {
             g.setPermissionNeeded(weap.getString("Weapons." + key + ".Permission"));
             g.setProjectile(weap.getString("Weapons." + key + ".Projectile Type"));
             YaWSpleef.guns.put(key, g);
+            ItemStack iS = new ItemStack(g.getWeaponType(), 1);
+            ItemMeta iM = iS.getItemMeta();
+            iM.setDisplayName(Chat.color(g.getName()));
+            List<String> iSLore = new ArrayList<>();
+            for (String s : g.getWeaponLore()){
+                iSLore.add(Chat.color(s.replace("@c", g.getWeaponCost().toString())));
+            }
+            iM.setLore(iSLore);
+            iS.setItemMeta(iM);
+            YaWSpleef.weaponPerms.put(g.getPermissionNeeded(), iS);
         }
     }
 }

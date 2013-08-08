@@ -53,7 +53,7 @@ public class Gun {
     private int speedBoostDuration = 0;
     private int speedBoostStrength = 0;
     private double speedBoostCD = 0.0;
-    private double weaponCost = 0.0;
+    private Double weaponCost = 0.0;
     private Material weaponType = Material.STICK;
     private boolean blindingShot = false;
     private int blindingShotDuration = 0;
@@ -102,11 +102,11 @@ public class Gun {
         this.weaponType = weaponType;
     }
 
-    public double getWeaponCost() {
+    public Double getWeaponCost() {
         return weaponCost;
     }
 
-    public void setWeaponCost(double weaponCost) {
+    public void setWeaponCost(Double weaponCost) {
         this.weaponCost = weaponCost;
     }
 

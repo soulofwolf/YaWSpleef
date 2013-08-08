@@ -43,7 +43,18 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public static boolean econOn = false;
     public static List<String> onStart = new ArrayList<>();
     public static Map<String, Gun> guns = new HashMap<>();
-
+    public static List<String> CD = new ArrayList<>();
+    public static List<String> specialShotCD = new ArrayList<>();
+    public static List<String> grenadeCD = new ArrayList<>();
+    public static Map<String, String> playerShots = new HashMap<>();
+    public static List<String> blindG = new ArrayList<>();
+    public static List<String> blindS = new ArrayList<>();
+    public static List<String> crossS = new ArrayList<>();
+    public static List<String> slowG = new ArrayList<>();
+    public static List<String> slowS = new ArrayList<>();
+    public static List<String> speedS = new ArrayList<>();
+    public static List<String> speedG = new ArrayList<>();
+    public static List<String> summonS = new ArrayList<>();
 
     @Override
     public void onEnable(){
