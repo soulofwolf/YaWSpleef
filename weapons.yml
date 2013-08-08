@@ -1,0 +1,69 @@
+Weapons:
+  '&4Rail gun':
+    Cool Down: 1.25
+    Cross Shot:
+      Use: false
+      Cooldown: 3.5
+    Slow Shot:
+      Use: false
+      Duration: 3
+      Strength: 1
+      Cooldown: 5.0
+    Slow Grenade:
+      Use: false
+      Range: 5
+      Duration: 3
+      Strength: 1
+      Cooldown: 5.0
+    Blind Grenade:
+      Use: false
+      Range: 5
+      Duration: 3
+      Strength: 1
+      Cooldown: 5.0
+    Speed Grenade: 
+      Use: false
+      Range: 5
+      Duration: 3
+      Strength: 1
+      Cooldown: 5.0
+    Double Shot:
+      Use: false
+      Cooldown: 5.0
+    Triple Shot:
+      Use: false
+      Cooldown: 5.0
+    Rapid Shot: 
+      Use: true
+      Shots: 8
+      Time: 1.5
+      Cooldown: 3.5
+    Teleport Shot:
+      Use: false
+      Cooldown: 10.0
+    Summon Shot:
+      Use: false
+      Cooldown: 10.0
+    Invisible Shot:
+      Use: false
+      Duration: 3
+      Cooldown: 10.0
+    Speed Boost:
+      Use: false
+      Duration: 3
+      Strength: 1
+      Cooldown: 5.0
+    Blinding Shot:
+      Use: false
+      Duration: 3
+      Cooldown: 10.0
+    Weapon Cost: 1000
+    Weapon Type: STICK
+    Weapon Lore:
+    - '&2This gun fires in short bursts!'
+    - '&2Right click to Launch 8 shots'
+    - '&2 Over 8 Seconds'
+    Permission: 'gun.rapidshot'
+    #Must be arrow or snowball or fireball
+    Projectile Type: ARROW
+    

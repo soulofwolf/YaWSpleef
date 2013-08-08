@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e202d7d8-8926-443d-b49c-00df98d965c8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/EndArena.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/ParticleEffect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/ResetArena.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/StartArena.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Arena.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="YaWSpleef.iws" />
@@ -37,6 +29,7 @@
     <file path="/Chat.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375909337663" ignored="false" />
     <file path="/ResetArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375914272271" ignored="false" />
     <file path="/Gun.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375919695004" ignored="false" />
+    <file path="/.gitignore" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375925477761" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,19 +90,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="YaWSpleef.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="YaWSpleef.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="59" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartArena.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/arenaevents/StartArena.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="23" selection-start="917" selection-end="917" vertical-scroll-proportion="0.0">
+            <state line="40" column="59" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.08820024">
               <folding />
             </state>
           </provider>
@@ -160,13 +144,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gun.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gun.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="21" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.533969">
+            <state line="33" column="94" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="5" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -207,7 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadArena.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/InventoryLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/InventoryClick.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerJoin.java" />
@@ -223,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/ParticleEffect.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -234,8 +227,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="126" />
-    <option name="y" value="2" />
+    <option name="x" value="-2" />
     <option name="width" value="1315" />
     <option name="height" value="1042" />
   </component>
@@ -670,7 +662,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="126" y="2" width="1315" height="1042" extended-state="0" />
+    <frame x="-2" y="0" width="1315" height="1042" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -757,13 +749,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/InventoryClick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerJoin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="59" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
@@ -813,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="59" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerMove.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="8" selection-start="877" selection-end="990" vertical-scroll-proportion="0.0">
@@ -864,10 +842,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="21" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.533969">
+        <state line="33" column="94" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="5" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="59" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.08820024">
+          <folding />
         </state>
       </provider>
     </entry>
