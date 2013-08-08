@@ -14,6 +14,7 @@ import us.iluthi.soulofw0lf.yawspleef.runnables.ArenaCheck;
 import us.iluthi.soulofw0lf.yawspleef.savers.SaveArena;
 import us.iluthi.soulofw0lf.yawspleef.utility.Locations;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +38,7 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public static Location loc;
     public static Economy econ;
     public static boolean econOn = false;
+    public static List<String> onStart = new ArrayList<>();
 
 
     @Override

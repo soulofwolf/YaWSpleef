@@ -21,7 +21,7 @@ public class Arena {
     private String permission = "";
     private boolean permissionNeeded = false;
     private int minPlayers = 0;
-    private int maxPlayers = 0;
+    private Integer maxPlayers = 0;
     private boolean running = false;
     private boolean counting = false;
     private Sign startSign;
@@ -106,11 +106,11 @@ public class Arena {
         this.name = name;
     }
 
-    public int getMaxPlayers() {
+    public Integer getMaxPlayers() {
         return maxPlayers;
     }
 
-    public void setMaxPlayers(int maxPlayers) {
+    public void setMaxPlayers(Integer maxPlayers) {
         this.maxPlayers = maxPlayers;
     }
 
