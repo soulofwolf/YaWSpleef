@@ -99,6 +99,7 @@ public class ProjHit implements Listener{
                                     }
                                 }
                             }
+                            YaWSpleef.slowG.remove(p.getName());
                         }
                     }
                 }
