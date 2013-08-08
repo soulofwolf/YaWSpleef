@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e202d7d8-8926-443d-b49c-00df98d965c8" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/RunShot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" afterPath="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" />
@@ -13,7 +14,7 @@
     <file path="/pom.xml" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375904227497" ignored="false" />
     <file path="/YaWSpleef.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375985678926" ignored="false" />
     <file path="/Misc.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375905203507" ignored="false" />
-    <file path="/Dummy.txt" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375969503774" ignored="false" />
+    <file path="/Dummy.txt" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375989014445" ignored="false" />
     <file path="/Arena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375914009892" ignored="false" />
     <file path="/LoadArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375907468697" ignored="false" />
     <file path="/LoadLocale.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375909695784" ignored="false" />
@@ -27,16 +28,17 @@
     <file path="/PlayerJoin.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375908944422" ignored="false" />
     <file path="/PlayerLeave.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375908981611" ignored="false" />
     <file path="/PlayerMove.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375910941989" ignored="false" />
-    <file path="/ProjHit.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375987285217" ignored="false" />
+    <file path="/ProjHit.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375990065087" ignored="false" />
     <file path="/Chat.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375909337663" ignored="false" />
     <file path="/ResetArena.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375914272271" ignored="false" />
     <file path="/Gun.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375975812638" ignored="false" />
     <file path="/.gitignore" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375925477761" ignored="false" />
     <file path="/WeaponLoader.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375975843608" ignored="false" />
-    <file path="/PlayerDamage.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375974940617" ignored="false" />
+    <file path="/PlayerDamage.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375989962861" ignored="false" />
     <file path="/InventoryLoader.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375975582161" ignored="false" />
     <file path="/CDRun.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375983344252" ignored="false" />
     <file path="/RunShot.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375984972916" ignored="false" />
+    <file path="$PROJECT_DIR$/../Survival-Games/src/main/java/org/mcsg/survivalgames/SettingsManager.java" changelist="e202d7d8-8926-443d-b49c-00df98d965c8" time="1375989048851" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,19 +99,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlayerInteract.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlayerInteract.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="58" selection-start="3198" selection-end="3198" vertical-scroll-proportion="0.0">
+            <state line="176" column="68" selection-start="6653" selection-end="6653" vertical-scroll-proportion="3.1988165">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjHit.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PlayerDamage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="79" selection-start="2498" selection-end="2498" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjHit.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="175" selection-start="6861" selection-end="6861" vertical-scroll-proportion="2.2130177">
+            <state line="132" column="89" selection-start="6964" selection-end="6964" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/utility/ParticleEffect.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/LoadLocale.java" />
-        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/InventoryLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/Gun.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/loaders/WeaponLoader.java" />
@@ -148,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/runnables/RunShot.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/YaWSpleef.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java" />
         <option value="$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java" />
       </list>
     </option>
@@ -682,13 +695,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/savers/PlayerSaver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/savers/SaveArena.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
@@ -792,16 +798,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="58" selection-start="3198" selection-end="3198" vertical-scroll-proportion="0.0">
+        <state line="132" column="89" selection-start="6964" selection-end="6964" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/ProjHit.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerDamage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="175" selection-start="6861" selection-end="6861" vertical-scroll-proportion="2.2130177">
+        <state line="53" column="79" selection-start="2498" selection-end="2498" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/us/iluthi/soulofw0lf/yawspleef/listeners/PlayerInteract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="68" selection-start="6653" selection-end="6653" vertical-scroll-proportion="3.1988165">
           <folding />
         </state>
       </provider>
