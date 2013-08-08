@@ -4,12 +4,14 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import us.iluthi.soulofw0lf.yawspleef.loaders.LoadArena;
 import us.iluthi.soulofw0lf.yawspleef.loaders.LoadLocale;
 import us.iluthi.soulofw0lf.yawspleef.loaders.RegisterEvents;
+import us.iluthi.soulofw0lf.yawspleef.loaders.WeaponLoader;
 import us.iluthi.soulofw0lf.yawspleef.runnables.ArenaCheck;
 import us.iluthi.soulofw0lf.yawspleef.savers.SaveArena;
 import us.iluthi.soulofw0lf.yawspleef.utility.Locations;
@@ -34,11 +36,13 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public static Map<String, String> commandSettings = new HashMap<>();
     public static Map<String, String> permissionSettings = new HashMap<>();
     public static Map<String, String> signLines = new HashMap<>();
+    public static Map<String, ItemStack> weaponPerms = new HashMap<>();
     public static String stub = "";
     public static Location loc;
     public static Economy econ;
     public static boolean econOn = false;
     public static List<String> onStart = new ArrayList<>();
+    public static Map<String, Gun> guns = new HashMap<>();
 
 
     @Override
@@ -49,6 +53,7 @@ public class YaWSpleef extends JavaPlugin implements Listener {
         LoadLocale.loadLocale();
         LoadArena.loadArenas();
         ArenaCheck.checkArenas();
+        WeaponLoader.loadAll();
         econOn = setupEconomy();
         if (getConfig().get("Lobby") != null){
             loc = Locations.stringToLoc(getConfig().getString("Lobby"));
@@ -69,11 +74,5 @@ public class YaWSpleef extends JavaPlugin implements Listener {
         }
         econ = rsp.getProvider();
         return econ != null;
-    }
-
-
-
-    private void arenaStarter(String aName) {
-
     }
 }

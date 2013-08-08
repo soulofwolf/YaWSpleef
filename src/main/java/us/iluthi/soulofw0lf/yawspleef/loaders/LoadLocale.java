@@ -13,12 +13,12 @@ import java.io.IOException;
  */
 public class LoadLocale {
     public static void loadLocale(){
-        YamlConfiguration locale = YamlConfiguration.loadConfiguration(new File("plugins/YawSpleef/Locale.yml"));
+        YamlConfiguration locale = YamlConfiguration.loadConfiguration(new File("plugins/Gun Spleef/Locale.yml"));
         if (locale.get("Messages") == null){
 
         }
         try {
-            locale.save(new File("plugins/YawSpleef/Locale.yml"));
+            locale.save(new File("plugins/Gun Spleef/Locale.yml"));
         } catch (IOException e){
             e.printStackTrace();
         }
