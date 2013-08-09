@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -28,10 +29,21 @@ public class InventoryClick implements Listener{
     @SuppressWarnings("deprecation")
     @EventHandler
     public void shopInv(InventoryClickEvent event){
+        if (event.getCurrentItem() != null && !event.getCurrentItem().getType().equals(Material.AIR) && event.getCurrentItem().getItemMeta() != null && event.getCurrentItem().getItemMeta().getDisplayName() != null && event.getCurrentItem().getItemMeta().getDisplayName().equals(Chat.color(YaWSpleef.localeSettings.get("Shop Item Name")))){
+            event.setResult(Event.Result.DENY);
+            event.setCancelled(true);
+            return;
+        }
+        if (event.isShiftClick()){
+            event.setResult(Event.Result.DENY);
+            event.setCancelled(true);
+        }
         Inventory inv = event.getInventory();
         if (!inv.getName().equals(Chat.color(YaWSpleef.localeSettings.get("Shop Name")))){
              return;
         }
+        event.setResult(Event.Result.DENY);
+        event.setCancelled(true);
         ItemStack iS = event.getCurrentItem();
         if (iS == null || iS.getType().equals(Material.AIR)){
             return;

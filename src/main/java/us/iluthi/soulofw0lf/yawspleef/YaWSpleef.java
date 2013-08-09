@@ -1,13 +1,17 @@
 package us.iluthi.soulofw0lf.yawspleef;
 
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
 import us.iluthi.soulofw0lf.yawspleef.loaders.LoadArena;
 import us.iluthi.soulofw0lf.yawspleef.loaders.LoadLocale;
 import us.iluthi.soulofw0lf.yawspleef.loaders.RegisterEvents;
@@ -55,6 +59,12 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     public static List<String> slowS = new ArrayList<>();
     public static List<String> speedG = new ArrayList<>();
     public static List<String> summonS = new ArrayList<>();
+    public static ScoreboardManager manager;
+    public static Map<String, Scoreboard> playerBoards = new HashMap<>();
+    public static ItemStack shopItem;
+    public static List<String> editingSpawns = new ArrayList<>();
+    public static List<String> addingSigns = new ArrayList<>();
+    public static Map<String, Arena> arenaEdit = new HashMap<>();
 
     @Override
     public void onEnable(){
@@ -66,10 +76,13 @@ public class YaWSpleef extends JavaPlugin implements Listener {
         ArenaCheck.checkArenas();
         WeaponLoader.loadAll();
         econOn = setupEconomy();
+        manager = Bukkit.getScoreboardManager();
         if (getConfig().get("Lobby") != null){
             loc = Locations.stringToLoc(getConfig().getString("Lobby"));
+            for (Player p : Bukkit.getOnlinePlayers()){
+                p.teleport(loc);
+            }
         }
-
     }
     @Override
     public void onDisable(){

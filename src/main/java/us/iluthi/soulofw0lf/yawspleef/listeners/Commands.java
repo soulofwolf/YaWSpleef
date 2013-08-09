@@ -1,11 +1,16 @@
-package us.iluthi.soulofw0lf.yawspleef.arenaevents;
+package us.iluthi.soulofw0lf.yawspleef.listeners;
 
-import us.iluthi.soulofw0lf.yawspleef.Arena;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.plugin.Plugin;
 
 /**
  * Created by: soulofw0lf
- * Date: 8/7/13
- * Time: 4:21 PM
+ * Date: 8/8/13
+ * Time: 8:45 PM
  * <p/>
  * This file is part of the Rpg Suite Created by Soulofw0lf and Linksy.
  * <p/>
@@ -22,8 +27,15 @@ import us.iluthi.soulofw0lf.yawspleef.Arena;
  * You should have received a copy of the GNU General Public License
  * along with The Rpg Suite Plugin you have downloaded.  If not, see <http://www.gnu.org/licenses/>.
  */
-public class EndArena {
-    public static void gameOver(Arena a){
+public class Commands implements Listener{
+    public Commands(Plugin plug){
+        Bukkit.getPluginManager().registerEvents(this, plug);
+    }
+    @EventHandler
+    public void playerCom(PlayerCommandPreprocessEvent event){
+        Player p = event.getPlayer();
+        String[] args = event.getMessage().split(" ");
+        String cmd = args[0].replace("/", "");
 
     }
 }

@@ -66,6 +66,7 @@ public class PlayerInteract implements Listener{
                         YaWSpleef.playerInventory.put(p.getName(), p.getInventory().getContents());
                         p.getInventory().clear();
                         InventoryLoader.gameInv(p);
+                        YaWSpleef.onStart.add(p.getName());
                     }
                 }
             }

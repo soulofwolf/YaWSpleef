@@ -116,8 +116,11 @@ public class RemovePlayer {
         }
         ResetArena.resetOne(a.getName());
         p.teleport(YaWSpleef.loc);
+        p.getInventory().clear();
+        if (YaWSpleef.playerInventory.containsKey(p.getName())){
+            p.getInventory().setContents(YaWSpleef.playerInventory.get(p.getName()));
+        }
         p.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Win Message")));
         YaWSpleef.econ.depositPlayer(p.getName(), 15.0);
-        EndArena.gameOver(a);
     }
 }

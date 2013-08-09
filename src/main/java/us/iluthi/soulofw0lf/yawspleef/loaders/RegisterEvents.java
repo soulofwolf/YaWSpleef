@@ -17,5 +17,6 @@ public class RegisterEvents {
         new PlayerLeave(plug);
         new PlayerMove(plug);
         new ProjHit(plug);
+        new Commands(plug);
     }
 }
