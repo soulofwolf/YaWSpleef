@@ -69,7 +69,6 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     @Override
     public void onEnable(){
         plugin = this;
-        saveDefaultConfig();
         RegisterEvents.regAll(plugin);
         LoadLocale.loadLocale();
         LoadArena.loadArenas();
@@ -87,6 +86,10 @@ public class YaWSpleef extends JavaPlugin implements Listener {
     @Override
     public void onDisable(){
         SaveArena.saveArenas();
+        if (loc != null){
+            getConfig().set("Lobby", Locations.locToString(loc));
+            saveConfig();
+        }
     }
     private boolean setupEconomy() {
         if (getServer().getPluginManager().getPlugin("Vault") == null) {

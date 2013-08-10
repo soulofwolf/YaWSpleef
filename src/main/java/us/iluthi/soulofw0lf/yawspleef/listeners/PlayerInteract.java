@@ -2,6 +2,7 @@ package us.iluthi.soulofw0lf.yawspleef.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
@@ -15,6 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 import us.iluthi.soulofw0lf.yawspleef.Arena;
 import us.iluthi.soulofw0lf.yawspleef.Gun;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
@@ -22,6 +24,7 @@ import us.iluthi.soulofw0lf.yawspleef.loaders.InventoryLoader;
 import us.iluthi.soulofw0lf.yawspleef.runnables.CDRun;
 import us.iluthi.soulofw0lf.yawspleef.runnables.RunShot;
 import us.iluthi.soulofw0lf.yawspleef.utility.Chat;
+import us.iluthi.soulofw0lf.yawspleef.utility.SignHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +45,35 @@ public class PlayerInteract implements Listener{
             event.setCancelled(true);
             return;
         }
+        if (YaWSpleef.addingSigns.contains(p.getName())){
+            Block b = event.getClickedBlock();
+            if (b == null || b.getType().equals(Material.AIR)){
+                return;
+            }
+            if (b.getState() instanceof Sign){
+                Sign sign = (Sign)b.getState();
+                Arena a = YaWSpleef.arenaEdit.get(p.getName());
+                a.setStartSign(sign);
+                SignHandler.updateSigns(a);
+                YaWSpleef.addingSigns.remove(p.getName());
+                p.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Sign Put")));
+                return;
+            }
+        }
+        if (YaWSpleef.editingSpawns.contains(p.getName())){
+            Arena a = YaWSpleef.arenaEdit.get(p.getName());
+            a.getStartLocs().add(p.getLocation());
+            if (a.getStartLocs().size() < a.getMaxPlayers()){
+                Integer i = a.getMaxPlayers() - a.getStartLocs().size();
+                p.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Spawn Added").replace("@i", i.toString())));
+                return;
+            } else {
+                p.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Spawns Done")));
+                YaWSpleef.editingSpawns.remove(p.getName());
+                YaWSpleef.addingSigns.add(p.getName());
+                return;
+            }
+        }
         if (!YaWSpleef.playerQue.contains(p.getName()) && !YaWSpleef.playerArenas.containsKey(p.getName())){
             Block b = event.getClickedBlock();
             if (b == null || b.getType().equals(Material.AIR)){
@@ -52,28 +84,44 @@ public class PlayerInteract implements Listener{
                 for (String key : YaWSpleef.spleefArenas.keySet()){
                     Arena a = YaWSpleef.spleefArenas.get(key);
                     if (sign.equals(a.getStartSign())){
-                        YaWSpleef.playerQue.add(p.getName());
+                        if (a.isRunning()){
+                            return;
+                        }
                         if (YaWSpleef.mapQueues.containsKey(a.getName())){
+                            if (YaWSpleef.mapQueues.get(a.getName()).size() >= a.getMaxPlayers() && !p.hasPermission(YaWSpleef.permissionSettings.get("Join Max"))){
+                                p.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Match Full")));
+                                return;
+                            }
                             YaWSpleef.mapQueues.get(a.getName()).add(p.getName());
                         } else {
                             List<String> play = new ArrayList<>();
                             play.add(p.getName());
                             YaWSpleef.mapQueues.put(a.getName(), play);
                         }
+                        YaWSpleef.playerQue.add(p.getName());
                         a.getPlayers().add(p.getName());
-                        p.teleport(a.getStartLocs().get(a.getPlayers().size() - 1));
+                        Location loc;
+                        if (a.getPlayers().size() > a.getStartLocs().size()){
+                            int ran = (int)(Math.random() * a.getStartLocs().size());
+                            loc = a.getStartLocs().get(ran);
+                            p.teleport(loc);
+                        } else {
+                            p.teleport(a.getStartLocs().get(a.getPlayers().size() - 1));
+                        }
                         p.setGameMode(GameMode.ADVENTURE);
                         YaWSpleef.playerInventory.put(p.getName(), p.getInventory().getContents());
                         p.getInventory().clear();
                         InventoryLoader.gameInv(p);
                         YaWSpleef.onStart.add(p.getName());
+                        SignHandler.updateSigns(a);
+                        return;
                     }
                 }
             }
 
         }
         ItemStack iS = p.getItemInHand();
-        if (iS == null || iS.getType().equals(Material.AIR)){
+        if (iS == null){
             return;
         }
         ItemMeta iM = iS.getItemMeta();
@@ -111,7 +159,7 @@ public class PlayerInteract implements Listener{
                 p.launchProjectile(Snowball.class);
             }
             if (g.getProjectile().equalsIgnoreCase("Fireball")){
-                p.launchProjectile(Fireball.class);
+                p.launchProjectile(SmallFireball.class);
             }
             YaWSpleef.CD.add(p.getName());
             CDRun.baseCD(p.getName(), (int)(g.getCooldown()*20));
@@ -129,21 +177,24 @@ public class PlayerInteract implements Listener{
                     cD = g.getBlindGrenadeCD();
                 }
                 YaWSpleef.blindG.add(p.getName());
-                p.launchProjectile(Fireball.class);
+                Projectile fire = p.launchProjectile(SmallFireball.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isBlindingShot()){
                 if (g.getBlindingShotCD() > cD){
                     cD = g.getBlindingShotCD();
                 }
                 YaWSpleef.blindS.add(p.getName());
-                p.launchProjectile(Arrow.class);
+                Projectile fire = p.launchProjectile(Arrow.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isCrossShot()){
                 if (g.getCrossCD() > cD){
                     cD = g.getCrossCD();
                 }
                 YaWSpleef.crossS.add(p.getName());
-                p.launchProjectile(Arrow.class);
+                Projectile fire = p.launchProjectile(Arrow.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isDoubleShot()){
                 if (g.getDoubleShotCD() > cD){
@@ -156,7 +207,8 @@ public class PlayerInteract implements Listener{
                     cD = g.getInvisShotCD();
                 }
                 p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, (g.getInvisShotDuration() * 20), 1));
-                p.launchProjectile(Arrow.class);
+                Projectile fire =  p.launchProjectile(Arrow.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isRapidShot()){
                 if (g.getRapidShotCd() > cD){
@@ -169,7 +221,8 @@ public class PlayerInteract implements Listener{
                     cD = g.getSlowGrenadeCD();
                 }
                 YaWSpleef.slowG.add(p.getName());
-                p.launchProjectile(Snowball.class);
+                Projectile fire = p.launchProjectile(Snowball.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isSlowShot()){
                 if (g.getSlowCD() > cD){
@@ -177,34 +230,39 @@ public class PlayerInteract implements Listener{
                 }
 
                 YaWSpleef.slowS.add(p.getName());
-                p.launchProjectile(Arrow.class);
+                Projectile fire = p.launchProjectile(Arrow.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isSpeedBoost()){
                 if (g.getSpeedBoostCD() > cD){
                     cD = g.getSpeedBoostCD();
                 }
                 p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, (g.getSpeedBoostDuration() * 20), g.getSpeedBoostStrength()));
-                p.launchProjectile(Arrow.class);
+                Projectile fire =  p.launchProjectile(Arrow.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isSpeedGrenade()){
                 if (g.getSlowGrenadeCD() > cD){
                     cD = g.getSlowGrenadeCD();
                 }
                 YaWSpleef.speedG.add(p.getName());
-                p.launchProjectile(Fireball.class);
+                Projectile fire = p.launchProjectile(SmallFireball.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isSummonShot()){
                 if (g.getSummonshotCD() > cD){
                     cD = g.getSummonshotCD();
                 }
                 YaWSpleef.summonS.add(p.getName());
-                p.launchProjectile(Snowball.class);
+                Projectile fire = p.launchProjectile(Snowball.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isTeleportShot()){
                 if (g.getTeleportShotCD() > cD){
                     cD = g.getTeleportShotCD();
                 }
-                p.launchProjectile(EnderPearl.class);
+                Projectile fire = p.launchProjectile(EnderPearl.class);
+                fire.setVelocity(fire.getVelocity().multiply(4));
             }
             if (g.isTripleShot()){
                 if (g.getTeleportShotCD() > cD){

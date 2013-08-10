@@ -16,6 +16,7 @@ public class RegisterEvents {
         new PlayerJoin(plug);
         new PlayerLeave(plug);
         new PlayerMove(plug);
+        new PlayerDamage(plug);
         new ProjHit(plug);
         new Commands(plug);
     }

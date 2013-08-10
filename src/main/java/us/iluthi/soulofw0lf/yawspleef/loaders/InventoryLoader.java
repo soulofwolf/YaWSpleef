@@ -12,10 +12,12 @@ import us.iluthi.soulofw0lf.yawspleef.utility.Chat;
  * Time: 3:40 PM
  */
 public class InventoryLoader {
+    @SuppressWarnings("deprecation")
     public static void gameInv(Player p){
         for (String key : YaWSpleef.weaponPerms.keySet()){
             if (p.hasPermission(key)){
                 p.getInventory().addItem(YaWSpleef.weaponPerms.get(key));
+                p.updateInventory();
             }
         }
     }

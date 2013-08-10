@@ -1,0 +1,12 @@
+name: YaWSpleef
+main: us.iluthi.soulofw0lf.yawspleef.YaWSpleef
+version: 1.0
+author: Soulofw0lf
+softdepend: [Multiverse-Core,Multiverse-Portals,WorldGuard]
+description: Wizard Spleef
+command:
+  ws:
+    description: load player scoreboards.
+    usage: /<ws> [load] [playername]
+    permission: ws.boards
+    permission-message: You don't have ws.boards

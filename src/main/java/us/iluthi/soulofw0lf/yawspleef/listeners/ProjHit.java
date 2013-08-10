@@ -3,6 +3,7 @@ package us.iluthi.soulofw0lf.yawspleef.listeners;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Fireball;
@@ -14,6 +15,7 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.BlockIterator;
 import us.iluthi.soulofw0lf.yawspleef.Arena;
 import us.iluthi.soulofw0lf.yawspleef.Gun;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
@@ -40,18 +42,28 @@ public class ProjHit implements Listener{
                 if (YaWSpleef.playerArenas.containsKey(shooter.getName())){
                     Arena a = YaWSpleef.spleefArenas.get(YaWSpleef.playerArenas.get(shooter.getName()));
                     Location loc = event.getEntity().getLocation();
-                    Block b = loc.getBlock();
-                    Gun g = new Gun();
-                    if (YaWSpleef.playerShots.containsKey(shooter.getName())){
-                    g = YaWSpleef.guns.get(YaWSpleef.playerShots.get(shooter.getName()));
+                    World world = arrow.getWorld();
+                    BlockIterator bi = new BlockIterator(world, arrow.getLocation().toVector(), arrow.getVelocity().normalize(), 0, 4);
+                    Block b = null;
+
+                    while(bi.hasNext())
+                    {
+                        b = bi.next();
+                        if(b.getTypeId()!=0) //Grass/etc should be added probably since arrows doesn't collide with them
+                        {
+                            break;
+                        }
                     }
                     if (b == null){
                         return;
                     }
+                    event.getEntity().remove();
                     if (b.getType().equals(Material.TNT)){
                         a.getResetBlocks().add(b);
                         b.setType(Material.AIR);
-                        ParticleEffect.fromId(22).play(loc, 15.0, 0f, 0f, 0f, 50, 50);
+                        ParticleEffect.fromId(22).play(loc, 15.0, 0f, 0f, 0f, 0.2f, 50);
+                        loc.setY(loc.getY() + 1);
+                        ParticleEffect.fromId(16).play(loc, 15.0, 0f, 0f, 0f, 0.2f, 50);
                         if (YaWSpleef.crossS.contains(shooter.getName())){
                             Location loc1 = b.getLocation();
                             Location loc2 = b.getLocation();
@@ -67,7 +79,7 @@ public class ProjHit implements Listener{
                             locList.add(loc3);
                             locList.add(loc4);
                             for (Location key : locList){
-                                Block bl = loc.getBlock();
+                                Block bl = key.getBlock();
                                 if (bl == null || bl.getType().equals(Material.AIR)){
                                     return;
                                 }

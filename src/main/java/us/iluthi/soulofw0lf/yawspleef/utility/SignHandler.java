@@ -31,7 +31,7 @@ public class SignHandler {
         Integer i = a.getPlayers().size();
         Integer m = a.getMaxPlayers();
         sign.setLine(2, Chat.color(YaWSpleef.signLines.get("Line 3").replace("@n", i.toString()).replace("@m", m.toString())));
-        sign.setLine(3, Chat.color(YaWSpleef.signLines.get("Counting").replace("@i", l.toString())));
+        sign.setLine(3, Chat.color(YaWSpleef.signLines.get("Countdown").replace("@i", l.toString())));
         sign.update();
     }
 }

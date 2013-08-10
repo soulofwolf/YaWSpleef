@@ -20,6 +20,12 @@ public class Countdown {
             Integer i = 30;
             @Override
             public void run(){
+                if (a.getPlayers().size() < a.getMinPlayers()){
+                    a.setCounting(false);
+                    SignHandler.updateSigns(a);
+                    cancel();
+                    return;
+                }
                 if (i == 0){
                     new StartArena(a);
                     a.setRunning(true);

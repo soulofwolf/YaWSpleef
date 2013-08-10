@@ -7,30 +7,17 @@ import org.bukkit.inventory.ItemStack;
 import us.iluthi.soulofw0lf.yawspleef.Arena;
 import us.iluthi.soulofw0lf.yawspleef.YaWSpleef;
 import us.iluthi.soulofw0lf.yawspleef.utility.Chat;
+import us.iluthi.soulofw0lf.yawspleef.utility.SignHandler;
 
 /**
  * Created by: soulofw0lf
  * Date: 8/8/13
  * Time: 2:36 PM
- * <p/>
- * This file is part of the Rpg Suite Created by Soulofw0lf and Linksy.
- * <p/>
- * The Rpg Suite is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * <p/>
- * The Rpg Suite is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * <p/>
- * You should have received a copy of the GNU General Public License
- * along with The Rpg Suite Plugin you have downloaded.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class RemovePlayer {
     public static void fellOut(Arena a, Player p){
         a.getPlayers().remove(p.getName());
+        SignHandler.updateSigns(a);
         if (YaWSpleef.slowG.contains(p.getName())){
             YaWSpleef.slowG.remove(p.getName());
         }
@@ -121,6 +108,9 @@ public class RemovePlayer {
             p.getInventory().setContents(YaWSpleef.playerInventory.get(p.getName()));
         }
         p.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Win Message")));
+        for (Player all : Bukkit.getOnlinePlayers()){
+            all.sendMessage(Chat.colorStub(YaWSpleef.localeSettings.get("Player Won").replace("@p", p.getName()).replace("@a", a.getName())));
+        }
         YaWSpleef.econ.depositPlayer(p.getName(), 15.0);
     }
 }
